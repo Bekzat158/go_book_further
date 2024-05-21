@@ -16,9 +16,12 @@ import (
 	"greenlight.alexedwards.net/internal/data"
 	"greenlight.alexedwards.net/internal/jsonlog"
 	"greenlight.alexedwards.net/internal/mailer"
+	"greenlight.alexedwards.net/internal/vcs"
 )
 
-const version = "1.0.0"
+var (
+	version = vcs.Version()
+)
 
 // Add maxOpenConns, maxIdleConns and maxIdleTime fields to hold the configuration
 // settings for the connection pool.
