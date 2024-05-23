@@ -75,10 +75,10 @@ func main() {
 	flag.BoolVar(&cfg.limiter.enabled, "limiter-enabled", true, "Enable rate limiter")
 	flag.Float64Var(&cfg.limiter.rps, "limiter-rps", 2, "Rate limiter maximum requests per second")
 	flag.IntVar(&cfg.limiter.burst, "limiter-burst", 4, "Rate limiter maximum burst")
-	flag.StringVar(&cfg.smtp.host, "smtp-host", "smtp.mailtrap.io", "SMTP host")
+	flag.StringVar(&cfg.smtp.host, "smtp-host", "sandbox.smtp.mailtrap.io", "SMTP host")
 	flag.IntVar(&cfg.smtp.port, "smtp-port", 25, "SMTP port")
-	flag.StringVar(&cfg.smtp.username, "smtp-username", "0abf276416b183", "SMTP username")
-	flag.StringVar(&cfg.smtp.password, "smtp-password", "d8672aa2264bb5", "SMTP password")
+	flag.StringVar(&cfg.smtp.username, "smtp-username", "a575eacfe9a755", "SMTP username")
+	flag.StringVar(&cfg.smtp.password, "smtp-password", "835f8495f631a7", "SMTP password")
 	flag.StringVar(&cfg.smtp.sender, "smtp-sender", "Greenlight <no-reply@greenlight.alexedwards.net>", "SMTP sender")
 	flag.Func("cors-trusted-origins", "Trusted CORS origins (space separated)", func(val string) error {
 		cfg.cors.trustedOrigins = strings.Fields(val)
